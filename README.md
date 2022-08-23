@@ -15,8 +15,11 @@
 - 第1個區段為Gantt Chart(甘特圖)
 	* 第一行先輸出方法名稱，接著輸出該方法對應的Gantt Chart，若方法名稱為All，則依序輸出FCFS, RR, SRTF, PPRR, HRRN的Gantt Chart
 	* ID為0-9, A-Z(由10開始為A依序向下代表，Process ID不會超過36個)，若該時間沒有Process在執行則由減號(-)來代表
+	![image](https://github.com/YunTing-Lee/CPU-Scheduling/blob/main/Picture/Gantt%20Chart.PNG)
 - 第2個區段顯示各個Process ID在各個方法(可能數個)的Waiting Time
+	![image](https://github.com/YunTing-Lee/CPU-Scheduling/blob/main/Picture/Waiting%20Time.PNG)
 - 第3個區段顯示各個Process ID在各個方法(可能數個)的Turnaround Time
+	![image](https://github.com/YunTing-Lee/CPU-Scheduling/blob/main/Picture/Turnaround%20Time.PNG)
 
 ## 方法1 : First Come Fist Serve(FCFS)
 ### 處理原則 : 
