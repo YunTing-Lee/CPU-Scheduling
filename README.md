@@ -1,10 +1,10 @@
 # CPU-Scheduling
 
 ## input檔案格式
-第1列的第1個數字為方法，有方法1~方法6
-第1列的第2個數字為Time Slice，範圍不定
-第2列的欄位名稱為 ProcessID, CPU Burst, Arrival Time, Priority
-第3列開始每行依序為[ProcessID][CPU Burst][Arrival Time][Priority]，且皆為正整數。不同欄位之間會用"空白"或是"tab"隔開
+第1列的第1個數字為方法，有方法1~方法6  
+第1列的第2個數字為Time Slice，範圍不定  
+第2列的欄位名稱為 ProcessID, CPU Burst, Arrival Time, Priority  
+第3列開始每行依序為[ProcessID][CPU Burst][Arrival Time][Priority]，且皆為正整數。不同欄位之間會用"空白"或是"tab"隔開  
 
 ## 方法1 : First Come Fist Serve(FCFS)
 ### 處理原則 : 
