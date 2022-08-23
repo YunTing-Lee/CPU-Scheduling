@@ -1,10 +1,21 @@
 # CPU-Scheduling
 
+##使用流程 :
+1. 編譯並執行
+2. 螢幕會顯示提示字元 :「請輸入檔案名稱(eg.input1, input2,......)[0]Quit :」，請使用者輸入檔名，不用加上附檔名，若輸入的檔案找不到，則會顯示「###檔名does not exist###」，請使用者再輸入一次，直到輸入正確為止開始執行對應的方法或是輸入0自動結束程式。
+
 ## input檔案格式
-第1列的第1個數字為方法，有方法1~方法6  
-第1列的第2個數字為Time Slice，範圍不定  
-第2列的欄位名稱為 ProcessID, CPU Burst, Arrival Time, Priority  
-第3列開始每行依序為[ProcessID][CPU Burst][Arrival Time][Priority]，且皆為正整數。不同欄位之間會用"空白"或是"tab"隔開  
+- 第1列的第1個數字為方法，有方法1~方法6  
+- 第1列的第2個數字為Time Slice，範圍不定  
+- 第2列的欄位名稱為 ProcessID, CPU Burst, Arrival Time, Priority  
+- 第3列開始每行依序為[ProcessID][CPU Burst][Arrival Time][Priority]，且皆為正整數。不同欄位之間會用"空白"或是"tab"隔開  
+
+## output檔案格式 : 
+- output輸出檔名 : "out_" + {input檔名}  
+- 第1個區段為Gantt Chart(甘特圖)
+	* 第一行先輸出方法名稱，接著輸出該方法對應的Gantt Chart，若方法名稱為All，則依序輸出FCFS, RR, SRTF, PPRR, HRRN的Gantt Chart
+	* ID為0~9, A~Z(由10開始為A依序向下代表，Process ID不會超過36個)，若該時間沒有Process在執行則由減號(-)來代表，
+
 
 ## 方法1 : First Come Fist Serve(FCFS)
 ### 處理原則 : 
