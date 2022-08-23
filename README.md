@@ -13,8 +13,8 @@
 ## output檔案格式 : 
 - output輸出檔名 : "out_" + {input檔名}  
 - 第1個區段為Gantt Chart(甘特圖)
-	* 第一行先輸出方法名稱，接著輸出該方法對應的Gantt Chart，若方法名稱為All，則依序輸出FCFS, RR, SRTF, PPRR, HRRN的Gantt Chart
-	* ID為0-9, A-Z(由10開始為A依序向下代表，Process ID不會超過36個)，若該時間沒有Process在執行則由減號(-)來代表  
+	- 第一行先輸出方法名稱，接著輸出該方法對應的Gantt Chart，若方法名稱為All，則依序輸出FCFS, RR, SRTF, PPRR, HRRN的Gantt Chart
+	- ID為0-9, A-Z(由10開始為A依序向下代表，Process ID不會超過36個)，若該時間沒有Process在執行則由減號(-)來代表  
 ![image](https://github.com/YunTing-Lee/CPU-Scheduling/blob/main/Picture/Gantt%20Chart.PNG)
 
 - 第2個區段顯示各個Process ID在各個方法(可能數個)的Waiting Time
@@ -46,8 +46,8 @@
 - Preemptive Priority Round Robin
 - 依Priority大小依序處理，Priority Number小的Process代表優先處理
 - 若Priority相同的Process不只一個，則採用Round Robin(RR)原則進行排程 : 
-	* 若有Priority相同的Process正在執行中，則需等待其Time Slice用罄
-	* 當Timeout或被Preemptive時，從佇列尾端開始依Priority大小排序，若恰巧有新來的Process，則讓新來的Process排在前面
+	- 若有Priority相同的Process正在執行中，則需等待其Time Slice用罄
+	- 當Timeout或被Preemptive時，從佇列尾端開始依Priority大小排序，若恰巧有新來的Process，則讓新來的Process排在前面
 	
 ## 方法5 : Highest Response Ratio Next(HRRN)
 ### 處理原則 : 
