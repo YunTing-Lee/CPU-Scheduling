@@ -69,10 +69,10 @@
 由這次的測試數據，所得出的**平均等待時間結果大小順序大約為PPRR > RR > FCFS > HRRN > SRTF**
 
 ### 方法一 First Come First Serve : ( Non-preemptive、不會Starvation )
-	在這次的測試數據中，FCFS的平均等待時間大概落在中間的位置。通常來說，使用FCFS的平均等待時間會較長。因FCFS的缺點是當有一個先到達的process有很長的CPU Burst Time時，那麼在他後面抵達的所有process就都必須要等待一段很長的時間，會導致平均等待時間大幅增加。因這次實驗的測試數據中沒有這種情況，所以FCFS所得出的平均等待時間就不會特別大。而FCFS也較公平，並且不會發生starvation，每個process只要等待比他先來的process做完就一定會換到他做。   
+在這次的測試數據中，FCFS的平均等待時間大概落在中間的位置。通常來說，使用FCFS的平均等待時間會較長。因FCFS的缺點是當有一個先到達的process有很長的CPU Burst Time時，那麼在他後面抵達的所有process就都必須要等待一段很長的時間，會導致平均等待時間大幅增加。因這次實驗的測試數據中沒有這種情況，所以FCFS所得出的平均等待時間就不會特別大。而FCFS也較公平，並且不會發生starvation，每個process只要等待比他先來的process做完就一定會換到他做。   
 
 ### 方法二 Round Robin : ( Preemptive、不會Starvation )
-	從比較的表中可以發現RR演算法的效能很大程度依賴於time slice所選擇的大小。當RR所選擇得time slice太小時，因為每個process都要分很多次才能執行完畢，而在實務上，小的time slice也會增加Context Switch的次數，Context switch太頻繁，會導致CPU Time未真正用在process的執行上，導致throughput變低，導致效率變差。但若time slice選擇大到大於process的最大CPU Burst Time時，RR排程法其實就會等同於FCFS排程法，變成沒有在分時執行，所以RR的time slice選擇不應太小也不應太大。RR為最公平的演算法，且雖然是preemptive 但不會發生Starvation，因為只要process到達後在ready queue排隊，就不會被插隊，也因此一定輪的到他執行。雖然RR等待時間會被分散在每個process上，但因為總等待時間也被拉得較長，所以平均等待時間也較久。  
+從比較的表中可以發現RR演算法的效能很大程度依賴於time slice所選擇的大小。當RR所選擇得time slice太小時，因為每個process都要分很多次才能執行完畢，而在實務上，小的time slice也會增加Context Switch的次數，Context switch太頻繁，會導致CPU Time未真正用在process的執行上，導致throughput變低，導致效率變差。但若time slice選擇大到大於process的最大CPU Burst Time時，RR排程法其實就會等同於FCFS排程法，變成沒有在分時執行，所以RR的time slice選擇不應太小也不應太大。RR為最公平的演算法，且雖然是preemptive 但不會發生Starvation，因為只要process到達後在ready queue排隊，就不會被插隊，也因此一定輪的到他執行。雖然RR等待時間會被分散在每個process上，但因為總等待時間也被拉得較長，所以平均等待時間也較久。  
 
 	
 ### 方法三 Shortest Remaining Time First : ( Preemptive、會Starvation )
