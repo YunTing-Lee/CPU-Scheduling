@@ -57,3 +57,10 @@
 
 ## 方法6 : All
 - 以上五種方法都要執行
+
+## 結果與討論
+不同排程法的比較( **<font color=red>紅色 : 時間最久</font>  **<font color=blue>藍色 : 時間最短</font> )
+- 平均等待時間（Average Waiting Time )  
+![image](https://github.com/YunTing-Lee/CPU-Scheduling/blob/main/Picture/Compare%20Waiting%20Time.png)
+- 工作往返時間（Turnaround Time） 
+![image](https://github.com/YunTing-Lee/CPU-Scheduling/blob/main/Picture/Compare%20Turnaround%20Time.png)
