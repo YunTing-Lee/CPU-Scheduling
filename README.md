@@ -1,7 +1,7 @@
 # CPU-Scheduling
 
 ## 開發平台
-Windows10
+Windows 10
 
 ## 開發環境
 Code::Block20.03
@@ -89,3 +89,4 @@ Code::Block20.03
 ### 方法五 Highest Response Ratio Next : ( Non-preemptive、不會Starvation)
 在這次的測試數據中，HRRN的平均等待時間大概落在第二小的位置。僅次於SRTF，而HRRN可以說是改良SJF的排程法，以反應時間比率當作變動優先等級來排程，Response Ratio = 1 + (Waiting Time / CPU Burst Time)，因此當一個process等得越久，他所算出來的反應時間比率就會越高，因此priority也會越高，也就更有機會先使用到CPU，從而讓process不會starvation，因為這就是HRRN的特性，需要工作很久的process經過等待時間，就可以逐漸提高priority，而不會被無限延宕。  
 	
+
